@@ -1,0 +1,1 @@
+# diod_shottky-
