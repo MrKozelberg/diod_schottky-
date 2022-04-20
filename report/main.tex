@@ -1,0 +1,52 @@
+% document type
+\documentclass[12pt]{article}
+
+\usepackage[a4paper, includefoot,
+            left=3cm, right=1cm,
+            top=1.5cm, bottom=1.5cm,
+            headsep=1cm, footskip=1cm]{geometry}
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+ 
+%Hyphenation rules
+%--------------------------------------
+\usepackage{hyphenat}
+\usepackage{tempora}
+
+% в преамбуле
+\usepackage{subcaption}
+
+\usepackage{physics}
+\usepackage{fixint}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx} % для вставки картинок
+\usepackage{amssymb,amsfonts,amsmath,amsthm} % математические дополнения от АМС
+\usepackage{indentfirst}
+\usepackage{nicefrac,xfrac}
+\usepackage{subcaption}
+
+\usepackage{cmap}
+
+\linespread{1.3} % полуторный интервал
+\frenchspacing
+
+\newcommand*{\figref}[2][]{\hyperref[#2]{Рис.~\ref*{#2}#1}}
+\newcommand*{\tabref}[2][]{\hyperref[#2]{Табл.~\ref*{#2}#1}}
+% \newcommand*{\tblref}[1]{\hyperref[#1]{Table~\ref*{#1}}}
+\newcommand*{\secref}[1]{\hyperref[#1]{Section~\ref*{#1}}}
+% \newcommand*{\secsref}[1]{\hyperref[#1]{Sections~\ref*{#1}}}
+% \newcommand*{\introref}[1]{\hyperref[#1]{Introduction}}
+
+\begin{document}
+	\input{titlepage}
+	\setcounter{page}{2}
+
+	\tableofcontents
+	\newpage
+
+\end{document}
